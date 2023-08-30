@@ -8,7 +8,7 @@ import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="bg-black text-white h-screen">
+    <div className="bg-black text-white h-screen font-roboto">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
