@@ -2,7 +2,7 @@ const MovieCard = ({ data }) => {
   return (
     <div className="bg-slate-700 cursor-pointer">
       <div className="">
-        <div className="h-96">
+        <div className="h-[450px]">
           <img src={data.Poster} alt={data.Title} className="w-full h-full" />
         </div>
       </div>
