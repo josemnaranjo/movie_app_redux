@@ -8,9 +8,9 @@ import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="bg-black text-white h-screen font-roboto">
+    <div className="bg-black text-white h-full w-full font-roboto">
       <Header />
-      <div className="container">
+      <div className="container mx-auto">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/movie/:imdbID" element={<MovieDetail />} />

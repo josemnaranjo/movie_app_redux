@@ -9,8 +9,14 @@ const MovieListing = () => {
 
   return (
     <div>
-      <h1>Movie Listing</h1>
-      <MovieCard />
+      <div className="mt-5">
+        <h2 className="mb-5 font-bold text-neutral-200 text-2xl">Movies</h2>
+        <div className="grid grid-cols-4 gap-5">
+          {info.Search?.map((movie, idx) => (
+            <MovieCard data={movie} key={idx} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
