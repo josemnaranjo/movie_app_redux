@@ -1,9 +1,13 @@
 const MovieCard = ({ data }) => {
   return (
-    <div className="bg-slate-700 cursor-pointer rounded">
+    <div className="bg-slate-700 cursor-pointer rounded transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
       <div className="">
         <div className="h-[450px]">
-          <img src={data.Poster} alt={data.Title} className="w-full h-full rounded" />
+          <img
+            src={data.Poster}
+            alt={data.Title}
+            className="w-full h-full rounded"
+          />
         </div>
       </div>
       <div>
