@@ -1,9 +1,9 @@
 const MovieCard = ({ data }) => {
   return (
-    <div className="bg-slate-700 cursor-pointer">
+    <div className="bg-slate-700 cursor-pointer rounded">
       <div className="">
         <div className="h-[450px]">
-          <img src={data.Poster} alt={data.Title} className="w-full h-full" />
+          <img src={data.Poster} alt={data.Title} className="w-full h-full rounded" />
         </div>
       </div>
       <div>
