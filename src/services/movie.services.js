@@ -3,12 +3,12 @@ import { APIKey } from "./movieKey";
 
 const basicURL = "https://www.omdbapi.com/";
 
-export const getAllMovies = async (movie, type) => {
+export const getAll = async (name, type) => {
   try {
-    const movies = await axios.get(
-      basicURL + "?apiKey=" + APIKey + "&s=" + movie + "&type=" + type
+    const response = await axios.get(
+      basicURL + "?apiKey=" + APIKey + "&s=" + name + "&type=" + type
     );
-    return movies.data;
+    return response.data;
   } catch (error) {
     return error.message;
   }
