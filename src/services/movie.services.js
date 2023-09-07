@@ -13,3 +13,14 @@ export const getAll = async (name, type) => {
     return error.message;
   }
 };
+
+export const getOne = async (id) => {
+  try {
+    const response = await axios.get(
+      basicURL + "?apiKey=" + APIKey + "&i=" + id + "&plot=full"
+    );
+    return response.data;
+  } catch (error) {
+    return error.message;
+  }
+};

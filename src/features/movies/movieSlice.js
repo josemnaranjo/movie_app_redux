@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk, current } from "@reduxjs/toolkit";
-import { getAll } from "../../services/movie.services";
+import { getAll, getOne } from "../../services/movie.services";
 
 //Thunk es un middleware de Redux que nos permite crear reducers que manejen funciones asincronas.
 //createAsyncThunk recibe dos parámetros.
@@ -27,9 +27,18 @@ export const fetchAsyncShows = createAsyncThunk(
   }
 );
 
+export const fetchAsyncMovieOrShowDetail = createAsyncThunk(
+  "movies/fetchAsyncMovieOrShowDetail",
+  async (id) => {
+    const data = await getOne(id);
+    return data;
+  }
+);
+
 const initialState = {
   movies: {},
   shows: {},
+  detail: {},
 };
 
 const movieSlice = createSlice({
@@ -60,6 +69,10 @@ const movieSlice = createSlice({
     [fetchAsyncShows.fulfilled]: (state, { payload }) => {
       console.log("fetched completed");
       return { ...state, shows: payload };
+    },
+    [fetchAsyncMovieOrShowDetail.fulfilled]: (state, { payload }) => {
+      console.log("fetched completed");
+      return { ...state, detail: payload };
     },
   },
 });
