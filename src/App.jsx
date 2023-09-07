@@ -1,7 +1,7 @@
 import "./App.css";
 import Home from "./pages/Home";
 import Header from "../src/components/Header";
-import MovieDetail from "./pages/MovieDetail";
+import Detail from "./pages/Detail";
 import PageNotFound from "./pages/PageNotFound";
 import Footer from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
@@ -13,7 +13,7 @@ function App() {
       <div className="container mx-auto">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/movie/:imdbID" element={<MovieDetail />} />
+          <Route path="/detail/:imdbID" element={<Detail />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </div>
