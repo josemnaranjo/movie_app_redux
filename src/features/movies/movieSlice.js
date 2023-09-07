@@ -50,6 +50,9 @@ const movieSlice = createSlice({
     addMovies: (state, { payload }) => {
       state.movies = payload;
     },
+    removeSelectedMovieOrShow: (state) => {
+      state.detail = {};
+    },
   },
 
   // las llamadas creadas en el thuk se colocan en esta parte, "extraReducer".
@@ -77,5 +80,5 @@ const movieSlice = createSlice({
   },
 });
 
-export const { addMovies } = movieSlice.actions;
+export const { addMovies, removeSelectedMovieOrShow } = movieSlice.actions;
 export default movieSlice.reducer;
