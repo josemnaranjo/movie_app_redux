@@ -9,20 +9,18 @@ import { getAll, getOne } from "../../services/movie.services";
 
 export const fetchAsyncMovies = createAsyncThunk(
   "movies/fetchAsyncMovies",
-  async () => {
-    const name = "harry";
+  async (term) => {
     const type = "movie";
-    const data = await getAll(name, type);
+    const data = await getAll(term, type);
     return data;
   }
 );
 
 export const fetchAsyncShows = createAsyncThunk(
   "movies/fetchAsyncShows",
-  async () => {
-    const name = "Friends";
+  async (term) => {
     const type = "series";
-    const data = await getAll(name, type);
+    const data = await getAll(term, type);
     return data;
   }
 );

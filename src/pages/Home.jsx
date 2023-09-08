@@ -9,6 +9,8 @@ import {
 
 const Home = () => {
   const dispatch = useDispatch();
+  const movieText = "Harry";
+  const showText = "Friends"
 
   //   const getMoviesFromService = async (movie, type) => {
   //     const movieText = movie;
@@ -19,8 +21,8 @@ const Home = () => {
 
   useEffect(() => {
     // getMoviesFromService("harry", "movie");
-    dispatch(fetchAsyncMovies());
-    dispatch(fetchAsyncShows());
+    dispatch(fetchAsyncMovies(movieText));
+    dispatch(fetchAsyncShows(showText));
   }, [dispatch]);
   return (
     <div>
